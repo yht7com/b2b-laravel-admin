@@ -32,10 +32,10 @@
     <div class="zt_center">
         <div class="flexslider">
             <ul class="slides">
-                <li><a href="https://github.com/imnotdoubi/laravel-admin" ><img src="/web/images/flash2/1.jpg" /></a></li>
-                <li><a href="https://github.com/imnotdoubi/laravel-admin" ><img src="/web/images/flash2/2.jpg" /></a></li>
-                <li><a href="https://github.com/imnotdoubi/laravel-admin" ><img src="/web/images/flash2/3.jpg" /></a></li>
-                <li><a href="https://github.com/imnotdoubi/laravel-admin" ><img src="/web/images/flash2/4.jpg" /></a></li>
+                <li><a href="https://github.com/yht7com/b2b-laravel-admin" ><img src="/web/images/flash2/1.jpg" /></a></li>
+                <li><a href="https://github.com/yht7com/b2b-laravel-admin" ><img src="/web/images/flash2/2.jpg" /></a></li>
+                <li><a href="https://github.com/yht7com/b2b-laravel-admin" ><img src="/web/images/flash2/3.jpg" /></a></li>
+                <li><a href="https://github.com/yht7com/b2b-laravel-admin" ><img src="/web/images/flash2/4.jpg" /></a></li>
             </ul>
         </div>
         <!-- 幻灯片 End -->

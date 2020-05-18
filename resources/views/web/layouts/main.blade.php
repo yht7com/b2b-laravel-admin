@@ -81,7 +81,7 @@
 
  @yield('content')
 
-<div class="links box clearfix"><span>友情链接：</span><a href="https://github.com/imnotdoubi" target="_blank">云海天</a></div>
+<div class="links box clearfix"><span>友情链接：</span><a href="https://github.com/yht7com" target="_blank">云海天</a></div>
 
 <div class="footer">
     <div class="box clearfix">

@@ -22,7 +22,7 @@
             <h2><span>联系我们</span></h2>
             <div class="qq">
                 <span>客服：云海天</span>
-                <span>联系：https://github.com/imnotdoubi</span>
+                <span>联系：https://github.com/yht7com</span>
             </div>
             <div class="copyright">
                 <p>版权所有：云海天</p>
