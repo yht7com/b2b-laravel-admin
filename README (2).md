@@ -1,5 +1,7 @@
-## b2b-b2b-laravel-admin行业门户网站管理系统前后端(简易版)
+# laravel-admin（如果帮助了你，请给个Star），请认真看介绍
+laravel-admin码的B2B电子商务行业门户后台网站管理系统<br>
 开箱即用，当前已发布商城、会员、项目、文章、项目资讯、问答、图库管理、供应管理、网站配置、等模型<br>
+新增微信小程序版本，详情请移步https://github.com/imnotdoubi/laraveladmin-xcx<br>
 
 目前已更新PC端预览，链接查看 http://b2b.yht7.com/<br>
 
@@ -8,7 +10,7 @@
 
 #安装方式
 
-1、git clone https://github.com/yht7com/b2b-laravel-admin.git<br>
+1、git clone https://github.com/imnotdoubi/laravel-admin.git<br>
 
 有朋友说更新慢，因此取消了数据中图片和vendor文件夹，<br>
 2、public目录下载(包含样式记得下载)<br>
@@ -36,10 +38,9 @@ http://b2b.yht7.com/data/vendor.zip<br>
 后台：http://127.0.0.1/admin/auth/login  默认密码 admin  admin
 
 #部分截图
-![b2b-laravel-admin](https://github.com/yht7com/b2b-laravel-admin/blob/master/public/vimg/10.jpg)
-![b2b-laravel-admin](https://github.com/yht7com/b2b-laravel-admin/blob/master/public/vimg/11.jpg)
-![b2b-laravel-admin](https://github.com/yht7com/b2b-laravel-admin/blob/master/public/vimg/12.jpg)
-![b2b-laravel-admin](https://github.com/yht7com/b2b-laravel-admin/blob/master/public/vimg/13.jpg)
-![b2b-laravel-admin](https://github.com/yht7com/b2b-laravel-admin/blob/master/public/vimg/14.jpg)
-![b2b-laravel-admin](https://github.com/yht7com/b2b-laravel-admin/blob/master/public/vimg/15.jpg)
-
+![laravel-admin](https://github.com/imnotdoubi/laravel-admin/blob/master/public/vimg/10.jpg)
+![laravel-admin](https://github.com/imnotdoubi/laravel-admin/blob/master/public/vimg/11.jpg)
+![laravel-admin](https://github.com/imnotdoubi/laravel-admin/blob/master/public/vimg/12.jpg)
+![laravel-admin](https://github.com/imnotdoubi/laravel-admin/blob/master/public/vimg/13.jpg)
+![laravel-admin](https://github.com/imnotdoubi/laravel-admin/blob/master/public/vimg/14.jpg)
+![laravel-admin](https://github.com/imnotdoubi/laravel-admin/blob/master/public/vimg/15.jpg)
