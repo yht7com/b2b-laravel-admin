@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -41,9 +43,19 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
-    //简单登录判断处理，详细过程请自行操作
-    public function login()
+    protected function validator(array $data)
     {
+        return Validator::make($data, [
+            'captcha' => ['required', 'captcha'],
+        ], [
+            'captcha.required' => '验证码不能为空',
+            'captcha.captcha' => '请输入正确的验证码',
+        ]);
+    }
+    //简单登录判断处理，详细过程请自行操作
+    public function login(Request $request)
+    {
+        $this->validator($request->all())->validate();
         $username = request()->input('username');
         $password = request()->input('password');
         if (auth('web')->attempt(['name' => $username, 'password' => $password, 'status_at' => 1])) {

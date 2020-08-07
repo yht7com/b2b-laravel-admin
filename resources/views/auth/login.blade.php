@@ -38,6 +38,23 @@
                                 @endif
                             </div>
                         </div>
+                        {{--验证码添加start--}}
+
+                        <div class="form-group{{ $errors->has('captcha') ? ' has-error' : '' }}">
+                            <label for="username" class="col-md-4 control-label">验证码</label>
+
+                            <div class="col-md-6">
+                                <input id="captcha" type="captcha" class="form-control" name="captcha" value="{{ old('captcha') }}" required>
+                                <img class="thumbnail captcha mt-3 mb-2" src="{{ captcha_src('math') }}" onclick="this.src='/captcha/math?'+Math.random()" title="点击图片重新获取验证码">
+
+                                @if ($errors->has('captcha'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('captcha') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        {{--验证码添加end--}}
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

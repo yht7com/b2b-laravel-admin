@@ -60,6 +60,10 @@ class RegisterController extends Controller
             'name' => 'required|between:2,16|unique:wbsdb_users',
             'email' => 'required|email|max:255|unique:wbsdb_users',
             'password' => 'required|between:6,16|confirmed',
+            'captcha' => ['required', 'captcha'],
+        ], [
+            'captcha.required' => '验证码不能为空',
+            'captcha.captcha' => '请输入正确的验证码',
         ]);
     }
 
@@ -76,6 +80,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'autoflg' => 0,
             'password' => bcrypt($data['password']),
+
         ]);
     }
 

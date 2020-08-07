@@ -19,7 +19,7 @@
         "laravel-admin-ext/wang-editor": "^1.1",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "mews/captcha": "^2.2",
+        "mews/captcha": "^3.1",
         "overtrue/laravel-lang": "~3.0",
         "overtrue/laravel-socialite": "~2.0",
         "overtrue/laravel-wechat": "~4.0",

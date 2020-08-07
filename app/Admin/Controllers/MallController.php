@@ -61,8 +61,7 @@ class MallController extends AdminController
 
         $grid->column('brand', __('商品品牌'));
 
-
-        $grid->column('status', __('状态'))->using(['1' => '显示', '0' => '隐藏']);
+        $grid->column('status', __('状态'))->using(['1' => '通过', '2'=> '待审', '3'=> '拒绝', '4'=> '下架', '5'=> '删除']);
 
         $grid->column('created_at', __('添加时间'));
 
@@ -74,7 +73,23 @@ class MallController extends AdminController
             // 去掉默认的id过滤器
             $filter->disableIdFilter();
 
-            $filter->like('title', '商品名称');
+            $filter->column(1/2, function ($filter) {
+                $filter->like('title', '名称');
+            });
+
+            $filter->column(1/2, function ($filter) {
+                $filter->equal('parent_id', '分类')
+                    ->select(Categorie::where('mid',5)->where('status',1)->pluck( 'typename','id'));
+
+            });
+            $filter->column(1/2, function ($filter) {
+                $filter->equal('status', '状态')->select(['1' => '通过', '2'=> '待审', '3'=> '拒绝', '4'=> '下架', '5'=> '删除']);
+
+            });
+            $filter->column(1/2, function ($filter) {
+                $filter->between('created_at','时间')->datetime();
+
+            });
 
         });
         return $grid;
@@ -123,7 +138,7 @@ class MallController extends AdminController
 
         $form->number('price', __('商品单价(￥)'));
 
-        $form->number('num', __('商品出售数量'));
+        $form->number('num', __('销售量'));
 
         $form->text('brand', __('商品品牌'));
 
@@ -133,17 +148,17 @@ class MallController extends AdminController
 
         $form->select('city','城市');
         
-        $form->image('litpic', __('缩略图'))->uniqueName()->removable();
+        $form->image('litpic', __('商品单图'))->uniqueName()->removable();
          //图集上传
         $form->multipleImage('thumb','商品图集【可传多个】')->uniqueName()->removable();
 
         $form->ueditor('content', __('商品详情'));
 
-        $form->switch('status', __('状态'))->default('1');
+        $form->radio('status', __('状态'))->options(['1' => '通过', '2'=> '待审', '3'=> '拒绝', '4'=> '下架', '5'=> '删除'])->default('1');
 
-        $form->text('n1', __('可选属性1'));
+        $form->text('n1', __('补充信息1'))->value('示例：货到付款');
 
-        $form->text('n2', __('可选属性2'));
+        $form->text('n2', __('补充信息2'))->value('示例：包邮 / 满88包邮');
 
         $form->number('hits', __('点击率'))->value(rand(100,500));
         //隐藏
